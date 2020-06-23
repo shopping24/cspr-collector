@@ -12,6 +12,7 @@ type CSPReport struct {
 	BlockedUri         string    `json:"blocked-uri"`
 	StatusCode         int       `json:"status-code"`
 	ScriptSample       string    `json:"script-sample"`
+	UserAgent          string    `json:"user-agent"`
 	Occurred           time.Time `json:"occurred"`
 }
 

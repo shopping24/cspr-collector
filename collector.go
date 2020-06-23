@@ -55,6 +55,8 @@ func (c *Collector) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	data.Report.UserAgent = r.Header.Get("User-Agent")
+
 	c.WorkQueue <- data
 
 	c.response(w, http.StatusCreated, "")
